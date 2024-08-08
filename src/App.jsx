@@ -9,6 +9,7 @@ import CartContext from "./context/CartContext";
 import ProductInfos from "./components/ProductInfos";
 import ProductImages from "./components/ProductImages";
 
+
 function App() {
   const { addItemToCart, updateItemInCart, removeFromCart, getQuantityInCart } = useContext(CartContext);
 
@@ -29,7 +30,7 @@ function App() {
   return (
     <>
       <Header />
-
+     
       <main className="lg:grid justify-items-center lg:max-w-7xl lg:grid-cols-main mt-20 gap-20">
       <ProductImages currentProduct={currentProduct} />
 

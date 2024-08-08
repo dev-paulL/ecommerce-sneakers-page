@@ -36,6 +36,7 @@ export function CartProvider({ children }) {
   const getTotalCartPrice = () => {
     return cart.reduce((sum, item) => sum + item.price * item.quantity, 0).toFixed(2);
   };
+
   return (
     <CartContext.Provider
       value={{

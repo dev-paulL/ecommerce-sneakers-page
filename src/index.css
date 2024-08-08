@@ -5,8 +5,17 @@
 @tailwind components;
 @tailwind utilities;
 
+
+html {
+  width: 100%;
+}
 body {
   font-family: "Kumbh Sans", sans-serif;
-  line-height: 1.6;
+width: 100%;
 }
-
+*{
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}

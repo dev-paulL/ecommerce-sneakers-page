@@ -25,6 +25,3 @@ export default {
   plugins: [],
 };
 
-/*  
-  --White: hsl(0, 0%, 100%);
-  --Black: hsl(0, 0%, 0%); /* (with 75% opacity for lightbox background) */

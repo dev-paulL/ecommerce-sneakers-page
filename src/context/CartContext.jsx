@@ -29,6 +29,13 @@ export function CartProvider({ children }) {
     return item ? item.quantity : 0;
   };
 
+  const getTotalItemsInCart = () => {
+    return cart.reduce((sum, item) => sum + item.quantity, 0);
+  };
+
+  const getTotalCartPrice = () => {
+    return cart.reduce((sum, item) => sum + item.price * item.quantity, 0).toFixed(2);
+  };
   return (
     <CartContext.Provider
       value={{
@@ -37,6 +44,8 @@ export function CartProvider({ children }) {
         updateItemInCart,
         removeFromCart,
         getQuantityInCart,
+        getTotalItemsInCart,
+        getTotalCartPrice,
       }}
     >
       {children}

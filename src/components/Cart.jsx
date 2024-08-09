@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import CartContext from "../context/CartContext";
 import IconDelete from "../assets/images/icon-delete.svg";
 import { getPriceAfterDiscount } from "../utils";
+
+
 export default function Cart() {
   const { cart, removeFromCart } = useContext(CartContext);
 

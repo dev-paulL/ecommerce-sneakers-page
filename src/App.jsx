@@ -1,13 +1,13 @@
 import { useContext, useState } from "react";
-import Header from "./components/Header";
+import Header from "./components/header/Header";
 import IconMinus from "../src/assets/images/icon-minus.svg";
 import IconPlus from "../src/assets/images/icon-plus.svg";
 import IconCart from "../src/assets/images/icon-cart.svg";
-import QuantityButton from "./components/QuantityButton";
+import QuantityButton from "./components/reusable/QuantityButton";
 import { currentProduct } from "./constants";
 import CartContext from "./context/CartContext";
-import ProductInfos from "./components/ProductInfos";
-import ProductImages from "./components/ProductImages";
+import ProductInfos from "./components/product/ProductInfos";
+import ProductImages from "./components/product/ProductImages";
 
 function App() {
   const { addItemToCart, updateItemInCart, removeFromCart, getQuantityInCart } = useContext(CartContext);
@@ -46,7 +46,7 @@ function App() {
             </div>
             <button
               onClick={() => addItemToCart(currentProduct)}
-              className="md:flex-grow md:w-auto w-full p-4 shadow-2xl bg-Orange flex justify-center items-center text-lg rounded-lg font-extrabold text-VeryDarkBlue"
+              className="md:flex-grow md:w-auto w-full p-4 shadow-2xl bg-Orange flex justify-center items-center text-lg rounded-lg font-extrabold text-VeryDarkBlue hover:opacity-85"
             >
               <img src={IconCart} alt="" aria-label={`Add ${currentProduct.name} to cart.`} className="pr-4" />
               Add to cart

@@ -1,5 +1,5 @@
 import React from "react";
-import { getPriceAfterDiscount } from "../utils";
+import { getPriceAfterDiscount } from "../../utils";
 
 export default function ProductInfos({ currentProduct }) {
   return (

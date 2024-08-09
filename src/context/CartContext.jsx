@@ -4,6 +4,11 @@ export const CartContext = createContext();
 
 export function CartProvider({ children }) {
   const [cart, setCart] = useState([]);
+  const [showCart, setShowCart] = useState(false);
+
+  const toggleCart = () => {
+    setShowCart(!showCart);
+  };
 
   const addItemToCart = (wanted) => {
     setCart((prevCart) => {
@@ -47,6 +52,8 @@ export function CartProvider({ children }) {
         getQuantityInCart,
         getTotalItemsInCart,
         getTotalCartPrice,
+        toggleCart,
+        showCart,
       }}
     >
       {children}

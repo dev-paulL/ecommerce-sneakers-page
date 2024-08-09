@@ -1,22 +1,17 @@
 import React, { useContext, useState } from "react";
-import Logo from "../assets/images/logo.svg";
-import { navLinks } from "../constants";
-import IconCart from "../assets/images/icon-cart.svg";
-import ImageAvatar from "../assets/images/image-avatar.png";
-import CartContext from "../context/CartContext";
-import Cart from "./Cart";
-import IconMenu from "../assets/images/icon-menu.svg";
-import MobileMenu from "./MobileMenu";
-import Overlay from "./Overlay";
+import Logo from "../../assets/images/logo.svg";
+import { navLinks } from "../../constants";
+import IconCart from "../../assets/images/icon-cart.svg";
+import ImageAvatar from "../../assets/images/image-avatar.png";
+import CartContext from "../../context/CartContext";
+import Cart from "../Cart";
+import IconMenu from "../../assets/images/icon-menu.svg";
+import MobileMenu from "../header/MobileMenu";
+import Overlay from "../reusable/Overlay";
 
 export default function Header() {
-  const { getTotalItemsInCart } = useContext(CartContext);
-  const [showCart, setShowCart] = useState(false);
+  const { getTotalItemsInCart, toggleCart, showCart } = useContext(CartContext);
   const [showMobileNavigation, setShowMobileNavigation] = useState(false);
-
-  const toggleCart = () => {
-    setShowCart(!showCart);
-  };
 
   const toggleMenu = () => {
     setShowMobileNavigation(!showMobileNavigation);
@@ -37,8 +32,13 @@ export default function Header() {
           <ul className="lg:flex gap-8 ml-16 text-DarkGrayishBlue text-lg items-center">
             {navLinks.map((linkName) => {
               return (
-                <li className="text-sm" key={linkName}>
-                  <a href="#">{linkName}</a>
+                <li className="text-sm relative hover:text-Black" key={linkName}>
+                  <a
+                    className="after:content-[''] after:hidden after:hover:block after:absolute after:bg-Orange after:w-full after:top-11 after:h-1 after:left-0"
+                    href="#"
+                  >
+                    {linkName}
+                  </a>
                 </li>
               );
             })}
@@ -49,8 +49,8 @@ export default function Header() {
             <span className="absolute right-2 top-0 bg-Orange block text-White font-bold text-mini px-2 rounded-md">{getTotalItemsInCart()}</span>
             <img src={IconCart} className="w-6" alt="" />
           </button>
-          <button aria-label="Open Profile.">
-            <img src={ImageAvatar} className="w-6" alt="Your profile picture" />
+          <button className="rounded-full border-White hover:border-Orange border-2" aria-label="Open Profile.">
+            <img src={ImageAvatar} className="w-8" alt="Your profile picture" />
           </button>
         </div>
 

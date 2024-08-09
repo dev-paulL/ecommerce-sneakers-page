@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import ExitSvg from "/assets/images/icon-close.svg";
+import ExitSvg from "../assets/images/icon-close.svg";
 import Thumbnails from "./reusable/Thumbnails";
 import ArrowButton from "./reusable/ArrowButton";
 import { ImageContext } from "../context/ImageContext";

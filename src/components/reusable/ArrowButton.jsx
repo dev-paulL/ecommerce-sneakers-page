@@ -7,7 +7,7 @@ export default function ArrowButton({ PreviousOrNext, extraClass, onClick }) {
     <button
       onClick={onClick}
       aria-label="Show previous picture"
-      className={`absolute bg-White p-4 rounded-full aspect-square flex items-center justify-center lg:hidden ${extraClass}`}
+      className={`absolute bg-White p-4 rounded-full aspect-square flex items-center justify-center  ${extraClass}`}
     >
       <img src={PreviousOrNext === "Previous" ? PrevIcon : NextIcon} alt="" width={10} height={10} />
     </button>

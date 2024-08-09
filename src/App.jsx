@@ -29,8 +29,8 @@ function App() {
   return (
     <>
       <Header />
-
-      <main className="xl:grid xl:grid-cols-main xl:mt-20 xl:gap-20">
+     
+      <main className="xl:grid xl:grid-cols-main xl:mt-20 xl:gap-20 flex flex-col ">
         <ProductImages currentProduct={currentProduct} />
 
         <section className="p-6">
@@ -48,7 +48,7 @@ function App() {
               onClick={() => addItemToCart(currentProduct)}
               className="w-full p-4 shadow-2xl bg-Orange flex justify-center items-center text-lg rounded-lg font-extrabold text-VeryDarkBlue"
             >
-              <img src={IconCart} /* width={35} height={35} */ alt="" aria-label={`Add ${currentProduct.name} to cart.`} className="pr-4" />
+              <img src={IconCart} alt="" aria-label={`Add ${currentProduct.name} to cart.`} className="pr-4" />
               Add to cart
             </button>
           </div>

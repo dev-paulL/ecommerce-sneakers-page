@@ -8,6 +8,16 @@ export default {
       lg: "976px",
       xl: "1440px",
     },
+    fontSize: {
+      mini: "0.55rem",
+      sm: "0.8rem",
+      base: "1rem",
+      xl: "1.25rem",
+      "2xl": "1.563rem",
+      "3xl": "1.953rem",
+      "4xl": "2.441rem",
+      "5xl": "3.052rem",
+    },
     colors: {
       Orange: "hsl(26, 100%, 55%)",
       PaleOrange: "hsl(25, 100%, 94%)",
@@ -19,9 +29,8 @@ export default {
       Black: "hsl(0, 0%, 0%)",
     },
     gridTemplateColumns: {
-      main: 'auto auto'
-    }
+      main: "auto auto",
+    },
   },
   plugins: [],
 };
-

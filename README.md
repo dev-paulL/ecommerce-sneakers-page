@@ -43,7 +43,7 @@ To run locally, clone this repo and run `npm install` then `npm run dev`.
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://dev-paull.github.io/ecommerce-sneakers-page/](https://dev-paull.github.io/ecommerce-sneakers-page/)
 
 ## My process
 

@@ -15,7 +15,7 @@ export default function Cart() {
               <img className="row-span-2 col-start-1 rounded-md" src={item.images.thumbnails[0]} width={45} height={45} />
               <p className="col-start-2 row-start-1  text-DarkGrayishBlue">{item.name}</p>
               <p className="col-start-2 row-start-2  text-DarkGrayishBlue">
-                ${getPriceAfterDiscount(item)} x {item.quantity}{" "}
+                ${getPriceAfterDiscount(item)} x {item.quantity}
                 <strong className="ml-2 text-Black">${(getPriceAfterDiscount(item) * item.quantity).toFixed(2)}</strong>
               </p>
               <button className="col-start-3 row-span-2" aria-label={`Remove ${item.name} from Cart.`} onClick={() => removeFromCart(item.name)}>

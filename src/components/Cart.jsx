@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import CartContext from "../context/CartContext";
-import IconDelete from "../assets/images/icon-delete.svg";
+import IconDelete from "/assets/images/icon-delete.svg";
 import { getPriceAfterDiscount } from "../utils";
 
 

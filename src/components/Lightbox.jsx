@@ -6,7 +6,7 @@ import { ImageContext } from "../context/ImageContext";
 
 export default function Lightbox() {
   const { currentImage, bigImages, toggleLightBox } = useContext(ImageContext);
-
+ 
   
   return (
     <div className="flex absolute gap-6 w-2/4 flex-col min-h-full max-w-[30rem] justify-center items-center z-20">

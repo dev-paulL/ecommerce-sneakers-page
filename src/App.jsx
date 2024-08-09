@@ -54,6 +54,10 @@ function App() {
           </div>
         </section>
       </main>
+
+      <footer className="block font-bold mt-auto">
+        Coded by <a className="text-Orange" href="https://github.com/dev-paulL">@dev-paulL</a>
+      </footer>
     </>
   );
 }

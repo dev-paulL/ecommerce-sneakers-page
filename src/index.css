@@ -24,4 +24,5 @@ img {
   flex-direction: column;
   font-family: "Kumbh Sans", sans-serif;
   align-items: center;
+  min-height: 100vh;
 }

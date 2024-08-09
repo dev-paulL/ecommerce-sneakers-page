@@ -7,10 +7,10 @@ import { ImageContext } from "../../context/ImageContext";
 
 export default function ProductImages({ currentProduct }) {
   const { showLightbox, currentImage, toggleLightBox, bigImages } = useContext(ImageContext);
-
+  
   return (
     <>
-      {showLightbox && (
+      {showLightbox && (window.innerWidth >= 976) &&  (
         <>
           <Overlay />
           <Lightbox />
@@ -21,10 +21,11 @@ export default function ProductImages({ currentProduct }) {
         <ArrowButton extraClass={"right-4 lg:hidden"} PreviousOrNext={"Next"} />
 
         <img
-          className="cursor-pointer lg:rounded-xl lg:w-full sm:mt-40 lg:mt-0"
+          className="lg:cursor-pointer lg:rounded-xl lg:w-full sm:mt-40 lg:mt-0"
           src={bigImages[currentImage]}
           alt={currentProduct.name}
           onClick={toggleLightBox}
+          loading="lazy"
         />
 
         <Thumbnails extraClass={""} />

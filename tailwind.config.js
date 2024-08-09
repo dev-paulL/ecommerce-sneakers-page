@@ -10,6 +10,7 @@ export default {
     },
     fontSize: {
       mini: "0.55rem",
+      xs: "0.7rem",
       sm: "0.8rem",
       base: "1rem",
       xl: "1.25rem",
@@ -30,6 +31,8 @@ export default {
     },
     gridTemplateColumns: {
       main: "auto auto",
+      images: "repeat(4, 1fr)",
+      cartItem: "min-content auto-fill min-content",
     },
   },
   plugins: [],

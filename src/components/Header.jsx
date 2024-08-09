@@ -26,18 +26,18 @@ export default function Header() {
 
   return (
     <>
-      <header className="relative p-5 flex items-center border-b border-opacity-50 border-GrayishBlue ">
-        <button aria-label="Open Navigation Menu" className="p-1" onClick={toggleMenu}>
-          <img className="pr-4" alt="" src={IconMenu} width={30} />
+      <header className="relative p-5 flex items-center border-b border-opacity-50 border-GrayishBlue max-w-[70rem] w-full lg:w-[80%]">
+        <button aria-label="Open Navigation Menu" className="p-1 lg:hidden mr-3" onClick={toggleMenu}>
+          <img className="" alt="" src={IconMenu} width={15} />
           {/* BOURGIR 🍔🍔 */}
         </button>
 
         <img className="w-32" src={Logo} alt="Sneakers" />
-        <nav className="hidden xl:flex">
+        <nav className="hidden lg:flex ">
           <ul className="lg:flex gap-8 ml-16 text-DarkGrayishBlue text-lg items-center">
             {navLinks.map((linkName) => {
               return (
-                <li key={linkName}>
+                <li className="text-sm" key={linkName}>
                   <a href="#">{linkName}</a>
                 </li>
               );
@@ -46,7 +46,7 @@ export default function Header() {
         </nav>
         <div className="flex ml-auto mr-2 gap-2">
           <button aria-label="Open Cart." className="relative w-10" onClick={toggleCart}>
-            <span className="absolute right-2 top-0 bg-Orange block text-White font-bold text-mini lg:text-sm px-2 rounded-md"> {getTotalItemsInCart()}</span>
+            <span className="absolute right-2 top-0 bg-Orange block text-White font-bold text-mini px-2 rounded-md">{getTotalItemsInCart()}</span>
             <img src={IconCart} className="w-6" alt="" />
           </button>
           <button aria-label="Open Profile.">

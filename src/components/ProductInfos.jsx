@@ -8,10 +8,10 @@ export default function ProductInfos({ currentProduct }) {
       <h1 className="text-VeryDarkBlue text-4xl font-bold mt-2">{currentProduct.name}</h1>
       <p className="mt-6 text-DarkGrayishBlue text-lg">{currentProduct.description}</p>
 
-      <span className="flex items-center gap-6 mt-6">
-        <h2 className="font-bold text-3xl">${getPriceAfterDiscount(currentProduct)}</h2>
-        <p className="bg-VeryDarkBlue text-White w-min py-1 font-bold px-3 rounded-lg ">{currentProduct.discount}%</p>
-        <p className="text-DarkGrayishBlue line-through font-bold ml-auto">${currentProduct.price.toFixed(2)}</p>
+      <span className="flex items-center gap-6 mt-6 lg:block">
+        <h2 className="font-bold text-3xl lg:inline">${getPriceAfterDiscount(currentProduct)}</h2>
+        <p className="bg-VeryDarkBlue text-White w-min py-1 font-bold px-3 rounded-lg lg:inline lg:ml-5">{currentProduct.discount}%</p>
+        <p className="text-DarkGrayishBlue line-through font-bold ml-auto lg:ml-0 md:ml-10">${currentProduct.price.toFixed(2)}</p>
       </span>
       {/* which is the price before discount */}
     </>

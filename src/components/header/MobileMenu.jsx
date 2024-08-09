@@ -1,6 +1,6 @@
 import React from "react";
 import { navLinks } from "../../constants";
-import CloseSvg from "../../assets/images/icon-close.svg";
+import CloseSvg from "/assets/images/icon-close.svg";
 
 export default function MobileMenu({ toggleMenu }) {
   return (

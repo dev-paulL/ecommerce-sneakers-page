@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react";
-import Logo from "../../assets/images/logo.svg";
+import Logo from "/assets/images/logo.svg";
 import { navLinks } from "../../constants";
-import IconCart from "../../assets/images/icon-cart.svg";
-import ImageAvatar from "../../assets/images/image-avatar.png";
+import IconCart from "/assets/images/icon-cart.svg";
+import ImageAvatar from "/assets/images/image-avatar.png";
 import CartContext from "../../context/CartContext";
 import Cart from "../Cart";
-import IconMenu from "../../assets/images/icon-menu.svg";
+import IconMenu from "/assets/images/icon-menu.svg";
 import MobileMenu from "../header/MobileMenu";
 import Overlay from "../reusable/Overlay";
 

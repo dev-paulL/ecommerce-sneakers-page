@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import NextIcon from "../../assets/images/icon-next.svg";
-import PrevIcon from "../../assets/images/icon-previous.svg";
+import NextIcon from "/assets/images/icon-next.svg";
+import PrevIcon from "/assets/images/icon-previous.svg";
 import { ImageContext } from "../../context/ImageContext";
 
 export default function ArrowButton({ PreviousOrNext, extraClass }) {

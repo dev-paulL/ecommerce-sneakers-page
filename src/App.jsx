@@ -1,8 +1,8 @@
 import { useContext, useState } from "react";
 import Header from "./components/header/Header";
-import IconMinus from "../src/assets/images/icon-minus.svg";
-import IconPlus from "../src/assets/images/icon-plus.svg";
-import IconCart from "../src/assets/images/icon-cart.svg";
+import IconMinus from "/assets/images/icon-minus.svg";
+import IconPlus from "/assets/images/icon-plus.svg";
+import IconCart from "/assets/images/icon-cart.svg";
 import QuantityButton from "./components/reusable/QuantityButton";
 import { currentProduct } from "./constants";
 import CartContext from "./context/CartContext";

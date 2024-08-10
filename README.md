@@ -42,7 +42,7 @@ To run locally, clone this repo and run `npm install` then `npm run dev`.
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/sneakers-e-commerce-react-and-tailwind-f9l8O_H_pE](https://www.frontendmentor.io/solutions/sneakers-e-commerce-react-and-tailwind-f9l8O_H_pE)
 - Live Site URL: [https://dev-paull.github.io/ecommerce-sneakers-page/](https://dev-paull.github.io/ecommerce-sneakers-page/)
 
 ## My process

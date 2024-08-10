@@ -46,9 +46,10 @@ function App() {
             </div>
             <button
               onClick={() => addItemToCart(currentProduct)}
+              aria-label={`Add ${currentProduct.name} to cart.`}
               className="md:flex-grow md:w-auto w-full p-4 shadow-2xl bg-Orange flex justify-center items-center text-lg rounded-lg font-extrabold text-VeryDarkBlue hover:opacity-85"
             >
-              <img src={IconCart} alt="" aria-label={`Add ${currentProduct.name} to cart.`} className="pr-4" />
+              <img src={IconCart} alt=""  className="pr-4" />
               Add to cart
             </button>
           </div>

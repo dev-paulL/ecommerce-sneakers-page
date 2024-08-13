@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import Logo from "/assets/images/logo.svg";
-import { navLinks } from "../../constants";
+import { navLinks, btnTransition } from "../../constants";
 import IconCart from "/assets/images/icon-cart.svg";
 import ImageAvatar from "/assets/images/image-avatar.png";
 import CartContext from "../../context/CartContext";
@@ -51,7 +51,7 @@ export default function Header() {
             <span className="absolute right-2 top-0 bg-Orange block text-White font-bold text-mini px-2 rounded-md">{getTotalItemsInCart()}</span>
             <img src={IconCart} className="w-6" alt="" />
           </button>
-          <button className="rounded-full border-White hover:border-Orange border-2" aria-label="Open Profile.">
+          <button className={`rounded-full border-White hover:border-Orange border-2 ${btnTransition}`} aria-label="Open Profile.">
             <img src={ImageAvatar} className="w-8" alt="Your profile picture" />
           </button>
         </div>

@@ -3,7 +3,7 @@ import CartContext from "../context/CartContext";
 import IconDelete from "/assets/images/icon-delete.svg";
 import { getPriceAfterDiscount } from "../utils";
 import { AnimatePresence, motion } from "framer-motion";
-
+import { btnTransition } from "../constants";
 export default function Cart() {
   const { cart, removeFromCart } = useContext(CartContext);
 
@@ -42,7 +42,7 @@ export default function Cart() {
             );
           })}
       </AnimatePresence>
-      <button name="Checkout" className="bg-Orange rounded-lg w-full mt-4 p-3 font-bold">
+      <button name="Checkout" className={`bg-Orange rounded-lg w-full mt-4 p-3 font-bold ${btnTransition}`}>
         Checkout
       </button>
     </motion.div>

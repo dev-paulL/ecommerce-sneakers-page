@@ -56,7 +56,10 @@ I chose this challenge as my third React project to practice what I learned from
 - 📱💻 Styled the product page for both mobile and desktop.
 - 📂 Implemented the Mobile Menu and the gallery lightbox.
 - ♻️ Refactored my code into reusable components, and I plan to keep improving it.
-- ✨ **Hover effects and animations coming soon** 
+
+#### Updates:
+
+- ✨ Enhanced the design with animations *(using framer-motion for React)* and transitions
 
 ### Built with
 

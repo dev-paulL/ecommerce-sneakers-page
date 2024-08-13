@@ -22,3 +22,6 @@ export const currentProduct = {
     ],
   },
 };
+
+
+export const btnTransition = "hover:bg-opacity-75 transition-colors duration-300 ease-in-out"

@@ -15,6 +15,7 @@ export default function Thumbnails({ extraClass }) {
             src={image}
             alt=""
             onClick={() => setCurrentImage(index)}
+            loading="lazy"
           />
         );
       })}

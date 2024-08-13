@@ -8,6 +8,7 @@ import Cart from "../Cart";
 import IconMenu from "/assets/images/icon-menu.svg";
 import MobileMenu from "../header/MobileMenu";
 import Overlay from "../reusable/Overlay";
+import { AnimatePresence } from "framer-motion";
 
 export default function Header() {
   const { getTotalItemsInCart, toggleCart, showCart } = useContext(CartContext);
@@ -32,11 +33,12 @@ export default function Header() {
           <ul className="lg:flex gap-8 ml-16 text-DarkGrayishBlue text-lg items-center">
             {navLinks.map((linkName) => {
               return (
-                <li className="text-sm relative hover:text-Black" key={linkName}>
+                <li className="text-sm relative hover:text-Black " key={linkName}>
                   <a
-                    className="after:content-[''] after:hidden after:hover:block after:absolute after:bg-Orange after:w-full after:top-11 after:h-1 after:left-0"
+                    className="after:content-[''] after:absolute after:bg-Orange after:w-full after:top-11 after:h-1 after:left-0 after:rounded-md after:scale-x-0 after:origin-center after:transition-transform after:duration-300 hover:after:scale-x-100"
                     href="#"
                   >
+                    {/* relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[2px] after:bg-blue-500 after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100" */}
                     {linkName}
                   </a>
                 </li>
@@ -53,16 +55,17 @@ export default function Header() {
             <img src={ImageAvatar} className="w-8" alt="Your profile picture" />
           </button>
         </div>
-
-        {showCart && <Cart />}
+        <AnimatePresence>{showCart && <Cart />}</AnimatePresence>
       </header>
 
-      {showMobileNavigation && (
-        <>
-          <MobileMenu toggleMenu={toggleMenu} />
-          <Overlay />
-        </>
-      )}
+      <AnimatePresence>
+        {showMobileNavigation && (
+          <>
+            <MobileMenu toggleMenu={toggleMenu} />
+            <Overlay />
+          </>
+        )}
+      </AnimatePresence>
     </>
   );
 }

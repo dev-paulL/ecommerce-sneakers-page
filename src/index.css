@@ -17,12 +17,3 @@ body {
 img {
   max-width: 100%;
 }
-
-#root {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  font-family: "Kumbh Sans", sans-serif;
-  align-items: center;
-  min-height: 100vh;
-}

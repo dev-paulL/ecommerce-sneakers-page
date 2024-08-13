@@ -8,6 +8,7 @@ import { currentProduct } from "./constants";
 import CartContext from "./context/CartContext";
 import ProductInfos from "./components/product/ProductInfos";
 import ProductImages from "./components/product/ProductImages";
+import { motion } from "framer-motion";
 
 function App() {
   const { addItemToCart, updateItemInCart, removeFromCart, getQuantityInCart } = useContext(CartContext);
@@ -36,7 +37,7 @@ function App() {
         <section className="p-6 lg:col-start-2 lg:w-[80%]">
           <ProductInfos currentProduct={currentProduct} />
 
-          <div className="flex mt-6 flex-col md:flex-row gap-4 shadow-sm">
+          <motion.div initial={{y:300, opacity:0}} animate={{opacity: 100, y: 0}} transition={{duration: 1, delay:3}} className="flex mt-6 flex-col md:flex-row gap-4 shadow-sm">
             <div className="flex md:w-auto w-full justify-between bg-LightGrayishBlue p-4 text-VeryDarkBlue text-lg font-bold rounded-lg items-center flex-1">
               <QuantityButton img={IconMinus} ariaLabel={`Decrease quantity of ${currentProduct.name}`} onClick={handleDecrement} />
 
@@ -52,7 +53,7 @@ function App() {
               <img src={IconCart} alt=""  className="pr-4" />
               Add to cart
             </button>
-          </div>
+          </motion.div>
         </section>
       </main>
 

@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 export default function Thumbnails({ extraClass }) {
   const { images, setCurrentImage, currentImage } = useContext(ImageContext);
   return (
-    <motion.div initial={{ opacity: 0, x: -200}} animate={{opacity: 100, x: 0}} transition={{duration: 0.8, delay:1}} className="hidden lg:grid lg:gap-3 lg:w-full lg:grid-cols-images">
+    <motion.div initial={{ opacity: 0, x: -200}} animate={{opacity: 100, x: 0}} transition={{duration: 0.8, delay:1}} className="hidden lg:grid lg:gap-3 lg:w-full lg:grid-cols-images overflow-hidden">
       {images.map((image, index) => {
         const isActive = index === currentImage;
         return (

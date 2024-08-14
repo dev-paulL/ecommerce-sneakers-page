@@ -10,7 +10,6 @@ import ProductInfos from "./components/product/ProductInfos";
 import ProductImages from "./components/product/ProductImages";
 import { motion } from "framer-motion";
 
-
 function App() {
   const { addItemToCart, updateItemInCart, removeFromCart, getQuantityInCart } = useContext(CartContext);
 
@@ -32,13 +31,18 @@ function App() {
     <>
       <Header />
 
-      <main className="lg:grid lg:grid-cols-main lg:mt-20 lg:gap-10 xl:gap-20 flex flex-col lg:w-[90%] lg:justify-center lg:items-center max-w-[70rem] lg:place-items-center">
+      <main className="lg:grid lg:grid-cols-main lg:mt-20 lg:gap-10 xl:gap-20 flex flex-col lg:w-[90%] lg:justify-center lg:items-center max-w-[70rem] lg:place-items-center mb-auto">
         <ProductImages currentProduct={currentProduct} />
 
         <section className="p-6 lg:col-start-2 lg:w-[80%]">
           <ProductInfos currentProduct={currentProduct} />
 
-          <motion.div initial={{x:300, opacity:0}} animate={{opacity: 100, x: 0}} transition={{duration: 0.5, delay:2}} className="flex mt-6 flex-col md:flex-row gap-4 shadow-sm">
+          <motion.div
+            initial={{ x: 300, opacity: 0 }}
+            animate={{ opacity: 100, x: 0 }}
+            transition={{ duration: 0.5, delay: 2 }}
+            className="flex mt-6 flex-col md:flex-row gap-4 shadow-sm"
+          >
             <div className="flex md:w-auto w-full justify-between bg-LightGrayishBlue p-4 text-VeryDarkBlue text-lg font-bold rounded-lg items-center flex-1">
               <QuantityButton img={IconMinus} ariaLabel={`Decrease quantity of ${currentProduct.name}`} onClick={handleDecrement} />
 
@@ -49,17 +53,20 @@ function App() {
             <button
               onClick={() => addItemToCart(currentProduct)}
               aria-label={`Add ${currentProduct.name} to cart.`}
-              className={`md:flex-grow md:w-auto w-full p-4 shadow-2xl bg-Orange flex justify-center items-center text-lg rounded-lg font-extrabold text-VeryDarkBlue ${btnTransition}`}
+              className={`md:flex-grow md:w-auto w-full p-4 shadow-2xl lg:shadow-sm bg-Orange flex justify-center items-center text-lg rounded-lg font-extrabold text-VeryDarkBlue ${btnTransition}`}
             >
-              <img src={IconCart} alt=""  className="pr-4" />
+              <img src={IconCart} alt="" className="pr-4" />
               Add to cart
             </button>
           </motion.div>
         </section>
       </main>
 
-      <footer className="block font-bold mt-auto">
-        Coded by <a className="text-Orange" href="https://github.com/dev-paulL">@dev-paulL</a>
+      <footer className="font-bold">
+        Coded by{" "}
+        <a className="text-Orange hover:underline" href="https://github.com/dev-paulL">
+          @dev-paulL
+        </a>
       </footer>
     </>
   );

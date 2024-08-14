@@ -18,7 +18,7 @@ export default function Header() {
     setShowMobileNavigation(!showMobileNavigation);
   };
 
-  document.body.style.overflow = showMobileNavigation ? "hidden" : "auto";
+  document.body.style.overflowY = showMobileNavigation ? "hidden" : "auto";
 
   return (
     <>
